@@ -36,14 +36,14 @@ const blogs = [
     id: "5",
     title: "STEM Projects for Curious Kids",
     excerpt: "Engage in exciting science and tech projects.",
-    content: "STEM (Science, Technology, Engineering, and Math) projects are excellent for fostering curiosity and problem-solving skills. Try these engaging activities:\n\n1. Build a Simple Robot: Use a small motor and household items to create a drawing robot.\n\n2. Create a Lava Lamp: Mix water, oil, food coloring, and effervescent tablets for a cool effect.\n\n3. Construct a Bridge: Use popsicle sticks to design and build a bridge, then test its strength.\n\n4. Code a Game: Introduce basic coding concepts with kid-friendly platforms like Scratch.\n\n5. Make a Solar Oven: Use a pizza box and aluminum foil to harness the sun's energy for cooking.\n\nEncourage questions and experimentation throughout these projects!",
+    content: "STEM (Science, Technology, Engineering, and Math) projects are excellent for fostering curiosity and problem-solving skills. Try these engaging activities:\n\n1. Build a Simple Robot: Use a small motor and household items to create a drawing robot.\n\n2. Create a Lava Lamp: Mix water, oil, food coloring, and effervescent tablets for a cool effect.\n\n3. Construct a Bridge: Use popsicle sticks to design and build a bridge, then test its strength.\n\n4. Code a Game: Introduce basic coding concepts with kid-friendly platforms like Scratch.\n\n5. Make a Solar Oven: Use a pizza box and aluminum foil to harness the sun&apos;s energy for cooking.\n\nEncourage questions and experimentation throughout these projects!",
     imageUrl:"/images/08.JPG",
   },
   {
     id: "6",
     title: "Bedtime Stories for Sweet Dreams",
     excerpt: "Magical tales to send kids off to dreamland.",
-    content: "Bedtime stories are a wonderful way to end the day and promote literacy. Here are some tips for a great storytelling experience:\n\n1. Choose Age-Appropriate Books: Select stories that match your child's interests and comprehension level.\n\n2. Create a Cozy Environment: Make a comfortable reading nook with soft lighting and pillows.\n\n3. Use Different Voices: Bring characters to life by using various voices and expressions.\n\n4. Encourage Participation: Ask questions about the story or let older kids read parts aloud.\n\n5. Develop a Routine: Set a regular time for bedtime stories to create a comforting habit.\n\nRemember, the goal is to make reading an enjoyable and bonding experience for both you and your child.",
+    content: "Bedtime stories are a wonderful way to end the day and promote literacy. Here are some tips for a great storytelling experience:\n\n1. Choose Age-Appropriate Books: Select stories that match your child&apos;s interests and comprehension level.\n\n2. Create a Cozy Environment: Make a comfortable reading nook with soft lighting and pillows.\n\n3. Use Different Voices: Bring characters to life by using various voices and expressions.\n\n4. Encourage Participation: Ask questions about the story or let older kids read parts aloud.\n\n5. Develop a Routine: Set a regular time for bedtime stories to create a comforting habit.\n\nRemember, the goal is to make reading an enjoyable and bonding experience for both you and your child.",
     imageUrl:"/images/sleep.JPG",
   },
   {
@@ -57,7 +57,7 @@ const blogs = [
     id: "8",
     title: "Music and Movement for Kids",
     excerpt: "Get moving and grooving with fun musical activities.",
-    content: "Music and movement activities are fantastic for children's physical and cognitive development. Try these fun ideas:\n\n1. Dance Freeze: Play music and have kids freeze when it stops.\n\n2. Musical Instrument Crafts: Create simple instruments like shakers or drums from household items.\n\n3. Singing Games: Teach classic songs with actions like 'Head, Shoulders, Knees, and Toes'.\n\n4. Rhythm Patterns: Clap or tap out simple rhythms for kids to repeat.\n\n5. Movement Songs: Use songs that encourage specific movements like 'The Hokey Pokey'.\n\nThese activities help develop coordination, listening skills, and creativity while having fun!",
+    content: "Music and movement activities are fantastic for children&apos;s physical and cognitive development. Try these fun ideas:\n\n1. Dance Freeze: Play music and have kids freeze when it stops.\n\n2. Musical Instrument Crafts: Create simple instruments like shakers or drums from household items.\n\n3. Singing Games: Teach classic songs with actions like &apos;Head, Shoulders, Knees, and Toes&apos;.\n\n4. Rhythm Patterns: Clap or tap out simple rhythms for kids to repeat.\n\n5. Movement Songs: Use songs that encourage specific movements like &apos;The Hokey Pokey&apos;.\n\nThese activities help develop coordination, listening skills, and creativity while having fun!",
     imageUrl:"/images/music3.JPG",
   },
 ]

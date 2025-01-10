@@ -12,9 +12,6 @@ const navItems = [
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-yellow-50 text-gray-800">
-      <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet" />
-      </Head>
       <header className="bg-teal-500 p-4 text-white h-[74px]">
         <nav className="container mx-auto flex flex-wrap justify-between items-center" style={{ fontFamily: 'Rubik Vinyl, sans-serif' }} >
           <Link href="/" className="text-3xl font-bold hover:text-pink-400 transition-colors">

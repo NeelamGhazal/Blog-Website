@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
           </p>
           <h2 className="text-2xl font-bold mb-2 text-purple-600">Parental Rights</h2>
           <p className="mb-4">
-            Parents have the right to review, delete, or refuse further collection of their child's personal information. Please contact us if you have any concerns or questions about your child's privacy on our website.
+            Parents have the right to review, delete, or refuse further collection of their child&apos;s personal information. Please contact us if you have any concerns or questions about your child's privacy on our website.
           </p>
           <p>
             By using Kids Blog, you agree to the terms outlined in this Privacy Policy. We may update this policy from time to time, so please check back regularly for any changes.

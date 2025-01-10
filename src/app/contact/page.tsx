@@ -22,7 +22,7 @@ export default function Contact() {
       {submitted ? (
         <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-[41rem]" role="alert">
           <p className="font-bold">Thank you!</p>
-          <p>Your message has been sent. We'll get back to you soon!</p>
+          <p>Your message has been sent. We&apos;ll get back to you soon!</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-white rounded-lg shadow-lg p-6 h-[40rem] mb-24">
