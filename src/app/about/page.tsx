@@ -8,7 +8,7 @@ export default function About() {
         <h1 className="text-4xl font-bold mb-8 text-center text-blue-600">About Kids Blog</h1>
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
           <Image 
-            src="/images/bf2.JPG" 
+            src="/images/bf2.jpg" 
             alt="Kids having fun" 
             width={800} 
             height={600} 

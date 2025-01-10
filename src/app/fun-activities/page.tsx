@@ -7,25 +7,25 @@ const activities = [
     id: "1",
     title: "DIY Slime Making",
     description: "Learn how to make colorful, gooey slime at home!",
-    imageUrl: "/images/dy.JPG",
+    imageUrl: "/images/dy.jpg",
   },
   {
     id: "2",
     title: "Backyard Scavenger Hunt",
     description: "Explore nature and find hidden treasures in your own backyard.",
-    imageUrl: "/images/by2.JPG",
+    imageUrl: "/images/by2.jpg",
   },
   {
     id: "3",
     title: "Build a Fort",
     description: "Create an awesome fort using blankets, pillows, and furniture.",
-    imageUrl: "/images/bf.JPG",
+    imageUrl: "/images/bf.jpg",
   },
   {
     id: "4",
     title: "Balloon Rocket Experiment",
     description: "Learn about propulsion with this fun balloon rocket activity.",
-    imageUrl: "/images/br1.JPG",
+    imageUrl: "/images/br1.jpg",
   },
 ]
 

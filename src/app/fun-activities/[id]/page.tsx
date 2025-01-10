@@ -22,14 +22,14 @@ const activities = [
     title: "Build a Fort",
     description: "Create an awesome fort using blankets, pillows, and furniture.",
     content: "Building a fort is a classic childhood activity that sparks imagination. Here&apos;s how to make an awesome indoor fort:\n\n1. Gather materials: blankets, sheets, pillows, chairs, and clothespins.\n2. Choose a base: Use a table, couch, or arrange chairs in a circle.\n3. Drape blankets over the base to create walls and a roof.\n4. Use clothespins to secure the blankets in place.\n5. Add pillows and cushions inside for comfort.\n6. Use a flashlight for lighting and bring in books or toys.\n\nEncourage kids to personalize their fort and use it for reading, playing, or even as a cozy nap spot!",
-    imageUrl: "/images/bf3.JPG",
+    imageUrl: "/images/bf3.jpg",
   },
   {
     id: "4",
     title: "Balloon Rocket Experiment",
     description: "Learn about propulsion with this fun balloon rocket activity.",
     content: "The balloon rocket experiment is a simple way to demonstrate Newton&apos;s Third Law of Motion. Here&apos;s how to do it:\n\n1. Thread a long piece of string through a straw.\n2. Tie the ends of the string between two chairs, keeping it taut.\n3. Blow up a balloon but don&apos;t tie it. Pinch the end to keep the air in.\n4. Tape the balloon to the straw on the string.\n5. Release the balloon and watch it zoom across the string!\n\nExplain that the air rushing out of the balloon (action) creates a forward motion (reaction). This is how real rockets work too!",
-    imageUrl: "/images/br.JPG",
+    imageUrl: "/images/br.jpg",
   },
 ]
 
