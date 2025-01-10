@@ -1,11 +1,13 @@
+'use client'
+
+import { useState } from 'react'
+import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
-import Layout from './components/Layout'
-import Hero from './components/Hero';
+import Layout from '../../components/Layout'
 
 const blogs = [
   {
-    id: "1",
+    id: "1",    
     title: "Fun Learning Activities",
     excerpt: "Make learning fun with exciting activities!",
     content: "Learning can be incredibly fun when you approach it with the right activities! Here are some exciting ways to make learning enjoyable:\n\n1. Educational Board Games: Play games that teach math, language, or general knowledge.\n\n2. Science Experiments: Conduct simple, safe experiments at home to learn about scientific concepts.\n\n3. Outdoor Nature Walks: Explore your local environment and learn about plants, animals, and ecosystems.\n\n4. Cooking Together: Teach measurements, following instructions, and basic chemistry through cooking.\n\n5. Art Projects: Combine creativity with learning about colors, shapes, and art history.\n\nRemember, the key to fun learning is to keep it interactive, hands-on, and enjoyable!",
@@ -62,51 +64,89 @@ const blogs = [
   },
 ]
 
-const heroSlides = [
-  {
-    title: "Welcome to Kids Blog!",
-    description: "Discover fun activities and exciting stories for kids of all ages.",
-    imageUrl: "/images/bg6.JPG",
-  },
-  {
-    title: "Learn Through Play",
-    description: "Explore our educational games and activities to make learning fun!",
-    imageUrl: "/images/p7.JPG",
-  },
-  {
-    title: "Unleash Creativity",
-    description: "Get inspired with our arts and crafts projects for young minds.",
-    imageUrl: "/images/p4.JPG",
-  },
-]
+export default function BlogPost({ params }: { params: { id: string } }) {
+  const blog = blogs.find(b => b.id === params.id)
+  const [comments, setComments] = useState<{ name: string; email: string; comment: string }[]>([])
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [comment, setComment] = useState('')
 
-export default function Home() {
+  if (!blog) {
+    notFound()
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (name && email && comment) {
+      setComments([...comments, { name, email, comment }])
+      setName('')
+      setEmail('')
+      setComment('')
+    }
+  }
+
   return (
     <Layout>
-   
-   {/* Hero Slider */}
-   <Hero slides={heroSlides} />
+      <article className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <h1 className="text-4xl font-bold mb-4 text-teal-600">{blog.title}</h1>
+        <Image src={blog.imageUrl} alt={blog.title} width={800} height={600} className="w-full rounded-lg mb-4" />
+        <div className="prose max-w-none">
+          {blog.content.split('\n\n').map((paragraph, index) => (
+            <p key={index} className="mb-4">{paragraph}</p>
+          ))}
+        </div>
+      </article>
 
-
-      <h2 className="text-3xl font-bold mb-8 text-center text-teal-600">Latest Blog Posts</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-        {blogs.map((blog) => (
-          <div key={blog.id} className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-200 ">
-            <Image src={blog.imageUrl} alt={blog.title} width={800} height={600} className="w-full lg:h-[16rem]" />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2 text-teal-600">{blog.title}</h2>
-              <p className="text-gray-600 mb-4">{blog.excerpt}</p>
-              <Link href={`/blog/${blog.id}`} className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition-colors inline-block">
-                Read More
-              </Link>
-            </div>
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h2 className="text-2xl font-bold mb-4 text-teal-600">Comments</h2>
+        <form onSubmit={handleSubmit} className="mb-6">
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Name:</label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              required
+            />
           </div>
-        ))}
-      </div>
-      <div className="text-center">
-        <Link href="/all-blogs" className="bg-teal-500 text-white px-6 py-3 rounded-full text-xl hover:bg-teal-600 transition-colors inline-block">
-          See All Blogs
-        </Link>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email:</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="comment" className="block text-gray-700 font-bold mb-2">Comment:</label>
+            <textarea
+              id="comment"
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              rows={4}
+              required
+            ></textarea>
+          </div>
+          <button type="submit" className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition-colors">
+            Submit Comment
+          </button>
+        </form>
+
+        <div>
+          {comments.map((c, index) => (
+            <div key={index} className="bg-gray-100 p-4 rounded-lg mb-4">
+              <h3 className="font-bold text-teal-600">{c.name}</h3>
+              <p className="text-sm text-gray-600 mb-2">{c.email}</p>
+              <p>{c.comment}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </Layout>
   )
